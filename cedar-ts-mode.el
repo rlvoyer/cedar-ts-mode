@@ -1,12 +1,12 @@
 ;;; cedar-ts-mode.el --- Tree-sitter support for Cedar policy files -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2025 Robert Voyer
+;; Copyright (C) 2026 Robert Voyer
 
 ;; Author: Robert Voyer
 ;; Keywords: languages cedar tree-sitter
-;; URL: https://github.com/robertvoyer/cedar-ts-mode
+;; URL: https://github.com/rlvoyer/cedar-ts-mode
 ;; Version: 0.1.0
-;; Package-Requires: ((emacs "30.1"))
+;; Package-Requires: ((emacs "29.1"))
 
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -82,7 +82,8 @@
    :language 'cedar
    :feature 'keyword
    '([(permit) (forbid) (when) (unless)] @font-lock-keyword-face
-     ["if" "then" "else"] @font-lock-keyword-face)
+     ["if" "then" "else"] @font-lock-keyword-face
+     ["has" "like" "is"] @font-lock-keyword-face)
 
    :language 'cedar
    :feature 'string
@@ -129,8 +130,7 @@
    :language 'cedar
    :feature 'operator
    '(["==" "!=" "<" "<=" ">" ">=" "&&" "||" "+" "-" "*" "!" "in"]
-     @font-lock-operator-face
-     ["has" "like" "is"] @font-lock-keyword-face)
+     @font-lock-operator-face)
 
    :language 'cedar
    :feature 'bracket
